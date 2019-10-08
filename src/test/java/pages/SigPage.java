@@ -9,12 +9,11 @@ public class SigPage {
 	public static WebElement SignInlink;
 	
 	
+	@FindBy(how=How.XPATH,using = "//img[@class='logo img-responsive']")
+	public static WebElement LogoLabel;
 	
-	
-	
-	
-	
-	
+	//@FindBy(how=How.CSS,using = "#passwd")
+	//public static WebElement LogoLabel;
 	//methods
 	
 	public void click_SignInLink(){
@@ -22,4 +21,11 @@ public class SigPage {
 		
 	}
 
+	/*public void verify_LogoLabel(){
+		LogoLabel.isDisplayed();
+		
+	}*/
+	public boolean verify_LogoLabel(){
+		return LogoLabel.isDisplayed();
+}
 }

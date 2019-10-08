@@ -9,7 +9,8 @@ public class AccountPage {
 @FindBy(how=How.ID,using ="email")	
 public static WebElement EmailBtn;
 
-@FindBy(how=How.XPATH,using ="//input[@id='passwd']")	
+//@FindBy(how=How.XPATH,using ="//input[@id='passwd']")	
+@FindBy(how=How.CSS,using = "#passwd")
 public static WebElement PasswordBtn;
 
 
@@ -21,8 +22,8 @@ public void enter_email(String email){
 
 
 public void enter_password(String password){
+	PasswordBtn.sendKeys(password);
 	
-	EmailBtn.sendKeys(password);
 }
 
 }
